@@ -1,0 +1,175 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@200;300;400;500;700;800&display=swap');
+/* Google Font */
+
+/* Global Items */
+
+body {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+
+.main-header .title {
+    letter-spacing: 0;
+}
+
+/* Global Items */
+
+/* Top Header */
+
+.top-header .lang .ar::before {
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: relative;
+    right: 7px;
+    font-size: 13px;
+}
+
+.top-header .lang.lang-active .ar::before {
+    content: "\f106";
+}
+
+.top-header .lang a img {
+    margin-right: auto;
+}
+
+.top-header .lang .lang-AR-EN {
+    right: 0;
+    left: auto;
+}
+
+/* Top Header */
+
+/* Header */
+
+.header .nav .nav-bar .logo::before {
+    right: auto;
+    left: -25px;
+}
+
+.header .nav .nav-bar .list ul {
+    padding-right: 2rem;
+}
+
+@media (max-width: 1399px) {
+    .header .nav .nav-bar .list {
+        right: -100%;
+        left: auto;
+    }
+
+    .header .nav .nav-bar .list.nav-active {
+        left: auto;
+        right: 0;
+    }
+}
+
+/* Header */
+
+/* Home */    
+
+@keyframes slideleft {
+    0% {
+        transform: translate(-100px);
+    }
+
+    100% {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideright {
+    0% {
+        transform: translate(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+.home .element {
+    right: 0;
+}
+
+/* Home */
+
+/* About */
+
+.about .all .about-content {
+    padding-right: 30px;
+}
+
+.about .all .about-content h2 {
+    letter-spacing: 0;
+}
+
+/* About */
+
+/* Services */
+
+.services .container .box .content-right {
+    margin-right: -30px;
+}
+
+.services .container .box .content-left {
+    margin-left: -30px;
+}
+
+@media (max-width: 991px) {
+    .services .container .box .content-right {
+        margin-right: 0px;
+    }
+    
+    .services .container .box .content-left {
+        margin-left: 0px;
+    }
+}
+
+/* Services */
+
+/* Products */
+
+.products .items .products-item .item-content .content .pro-colors .colors {
+    margin-right: 10px;
+}
+
+.products .container .items .products-item .item-content .stars .star {
+    transform: rotateY(180deg);
+}
+/* Products */
+
+/* Project */
+
+.project .box .project-content {
+    padding-right: 30px;
+}
+
+.project .pro2 .project-content {
+    right: 0;
+}
+
+/* Project */
+
+/* Contact */
+
+.contact .contact-header h2 {
+    letter-spacing: 0;
+}
+
+/* Contact */
+
+/* Footer */
+
+.footer .footer-content .footer-head::before {
+    right: 0;
+}
+
+.footer .footer-content .footer-news .news .email input[type = "submit"] {
+    left: 0;
+    right: auto;
+}
+
+/* Footer */

@@ -1,0 +1,52 @@
+/* Product */
+
+.product .pro-content .pro-title .name .value .users {
+    margin-right: 15px;
+    margin-left: auto;
+}
+
+.product .pro-content .pro-buy .order i {
+    margin-left: 5px;
+    margin-right: auto;
+}
+
+.product .pro-content .accordion .box .label::before {
+    left: 20px;
+    right: auto;
+}
+
+/* Product */
+
+/* Review */
+
+.reviews .review-header h2 {
+    letter-spacing: 0px;
+}
+
+.reviews .container .total-rv .total-header .value .users {
+    margin-right: 15px;
+    margin-left: auto;
+}
+
+.reviews .container .total-rv .prog-rv .content .progres-bar span {
+    left: -35px;
+    right: auto;
+}
+
+.reviews .container .total-rv .u-rv .rating form .input span {
+    right: 0;
+    left: auto;
+}  
+
+.reviews .container .total-rv .u-rv .rating form .input input:focus ~ span,
+.reviews .container .total-rv .u-rv .rating form .input input:valid ~ span {
+    right: 0;
+    left: auto;
+}
+
+.reviews .container .box .name span {
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+/* Review */
