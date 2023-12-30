@@ -49,22 +49,15 @@ setInterval(()=>{
 
 // Products
 
-let product = document.querySelectorAll('.products .container .items');
-let preBtn = document.querySelectorAll('.products .container .prev_next .prev');
-let nxtBtn = document.querySelectorAll('.products .container .prev_next .next');
+let product = document.querySelector('.products .container .items');
+let item = document.querySelector(".products .container .items .products-item").offsetWidth;
+let arrowBtn = document.querySelectorAll('.products .container .prev_next span');
 
-product.forEach( (item, i) => {
-    let containerDimensions = item.getBoundingClientRect();
-    let containerWidth = containerDimensions.width;
-
-    preBtn[i].addEventListener('click', () => {
-        item.scrollLeft -= containerWidth;
+arrowBtn.forEach(e => {
+    e.addEventListener("click", () => {
+        product.scrollLeft += e.className === "next" ? item : -item;
     })
-
-    nxtBtn[i].addEventListener('click', () => {
-        item.scrollLeft += containerWidth;
-    })
-});
+})
 
 // Images
 let filterItems = document.querySelector('.image .image-list');

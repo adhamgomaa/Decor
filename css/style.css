@@ -767,13 +767,19 @@ a:hover {
 .products .container .items {
     display: flex;
     gap: 1%;
-    overflow: hidden;
+    overflow-x: auto;
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.products .container .items::-webkit-scrollbar {
+    display: none;
 }
 
 .products .container .items .products-item {
     flex: 0 0 24%;
     padding-top: 30px;
+    scroll-snap-align: start;
 }
 
 @media (max-width: 991px) {
@@ -1033,6 +1039,12 @@ a:hover {
     overflow: hidden;
     transition: border 0.5s;
     cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .image .container .image-item .item-box {
+        margin-left: 0;
+    }
 }
 
 .image .container .image-item .item-box:hover {
@@ -1453,7 +1465,8 @@ a:hover {
 
 @media (max-width: 767px) {
     .footer .copy p {
-        font-size: 12px;
+        font-size: 14px;
+        text-align: center;
     }
 
     .footer .copy .link-contact a .social {
