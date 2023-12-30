@@ -28,7 +28,7 @@
 
 @media (max-width: 767px) {
     .product .container .image {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .product .container .image .second-image {
