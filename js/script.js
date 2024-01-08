@@ -40,12 +40,12 @@ let counter = 1;
 setInterval(()=>{
     document.querySelector(".home .home-image img.show").classList.remove("show");
     let img = document.querySelector(`.home .home-image .img-${counter}`);
-    img.classList.add('show')
-    counter++
+    img.classList.add('show');
+    counter++;
     if (counter > 2) {
-        counter = 1
+        counter = 1;
     }
-},3000)
+},5000)
 
 // Products
 

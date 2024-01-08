@@ -19,8 +19,10 @@ html {
 }
 
 body {
-    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.5;
+    color: #212529;
 }
 
 a {
@@ -31,6 +33,47 @@ a {
 
 a:hover {
     color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+@media (min-width: 1200px) {
+    h2 {
+    font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 2rem;
+}
+
+img {
+    vertical-align: middle;
+}
+
+input, textarea, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
 }
 
 .anime {
@@ -64,6 +107,45 @@ a:hover {
 .main-header .sub-title {
     text-transform: capitalize;
     color: #777;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1840px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* Global Items */
@@ -153,6 +235,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .header .nav-bar {
@@ -205,7 +288,7 @@ a:hover {
     .header .nav .nav-bar .logo::before {
         right: -15px;
     }
-
+    
     .header .nav .nav-bar .list ul li {
         margin: 0 10px;
     }
@@ -213,7 +296,7 @@ a:hover {
     .header .nav .nav-bar .list ul {
         padding-left: 1rem;
     }
-
+    
     .header .nav .nav-bar .list ul li a {
         font-size: 15px;
     }
@@ -223,7 +306,7 @@ a:hover {
     .header .nav .nav-bar .logo::before {
         right: -5px;
     }
-
+    
     .header .nav .nav-bar .list ul li {
         margin: 0 5px;
     }
@@ -231,7 +314,7 @@ a:hover {
     .header .nav .nav-bar .list ul {
         padding-left: 0.5rem;
     }
-
+    
     .header .nav .nav-bar .list ul li a {
         font-size: 14px;
     }
@@ -379,7 +462,7 @@ a:hover {
 
 .home {
     background-color: #ffefd6;
-    padding: 200px 0;
+    padding: 90px 0;
     position: relative;
 }
 
@@ -402,6 +485,7 @@ a:hover {
 
 .home .home-content h2 {
     text-transform: capitalize;
+    font-size: 2rem;
 }
 
 .home .home-content h2 span {
@@ -440,26 +524,9 @@ a:hover {
     animation-delay: 1s;
 }
 
-.home .home-image .slide-right {
-    animation: slideright 1s linear forwards;
-    animation-iteration-count: 1;
-}
-
 @keyframes slideleft {
     0% {
         transform: translate(100px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes slideright {
-    0% {
-        transform: translate(-100px);
         opacity: 0;
     }
 
@@ -496,7 +563,6 @@ a:hover {
 }
 
 .home .home-image {
-    transform: translate(0%, -50%);
     display: flex;
     align-items: center;
 } 
@@ -509,12 +575,24 @@ a:hover {
 
 .home .home-image img {
     width: 100%;
-    position: absolute;
     display: none;
 }
 
 .home .home-image .show {
     display: block;
+}
+
+.home .home-image .animation-scale {
+    animation: animation-scale 2s ease-out;
+}
+
+@keyframes animation-scale {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .home .wave {
@@ -1167,7 +1245,7 @@ a:hover {
 
 .contact .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     align-items: center;
 }

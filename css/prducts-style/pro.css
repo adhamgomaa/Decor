@@ -1,5 +1,7 @@
-.header {
-    position: sticky;
+hr {
+    height: 1px;
+    margin: 1rem 0;
+    opacity: 0.25;
 }
 
 /* Product */
@@ -216,6 +218,7 @@
 
 .product .pro-content .pro-buy .qty .counter {
     display: inline-flex;
+    align-items: center;
     border: 1px solid #e5e5e5;
     border-radius: 0.125rem;
 }
@@ -476,6 +479,7 @@
 }
 
 .reviews .container .total-rv .u-rv .rating label {
+    display: inline-block;
     width: 30px;
     cursor: pointer;
     position: relative;
